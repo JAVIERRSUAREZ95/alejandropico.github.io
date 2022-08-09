@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NOMBRE</title>
+<meta name="title" content="NOMBRE">
+<meta name="description" content="NOMBRE">
+
+<header>
+<center>
+<h1 style="color:#0BD210">¡DATE PRISA GOKU!</h1>
+</center>
+</header>
+
+<header>
+<div>
+<nav>
+<li><a href="NOMBRE.html">NOMBRE</a></li>                
+<li><a href="INDEX.html">INDEX</a></li>			 
+</nav>
+</header>
+
+<style>
+#miCanvas{  border:dotted 16px red;
+            background: blue;
+</style>
+
+<script>
+window.onload = function(){
+    var canvas = document.getElementById("miCanvas");
+    if(canvas && canvas.getContext){
+        var ctx = canvas.getContext("2d");
+        if(ctx){
+            //ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+            var gradiente = ctx.createRadialGradient(canvas.width/2,
+            canvas.height, 10, canvas.width/2, 0, 100);
+            gradiente.addColorStop(0, "pink");
+            gradiente.addColorStop(0.15, "#1CED7E");
+            gradiente.addColorStop(0.35, "#1EF7B6");
+            gradiente.addColorStop(0.65, "#25E0D5");
+            gradiente.addColorStop(1, "red");
+            ctx.fillStyle = gradiente;
+            ctx.fillRect(0,0,canvas.width, canvas.height);      
+            var gradiente = ctx.createRadialGradient(
+            canvas.width/2, canvas.height/2, 10,
+            canvas.width/2, canvas.height/2, 300);
+            gradiente.addColorStop(0, "pink");
+            gradiente.addColorStop(0.15, "#3EDDFA");
+            gradiente.addColorStop(0.35, "white");
+            gradiente.addColorStop(0.65, "#1CED7E");
+            gradiente.addColorStop(1, "blue");
+            ctx.fillStyle = gradiente;
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+
+
+        
+            //Descripcion de lineas
+            ctx.lineWidth = 7;
+            ctx.strokeStyle = "Blue";
+            //Dibujamos esquina
+            ctx.beginPath();
+            //ctx.lineJoin = "round";
+            ctx.lineJoin = "bevel";
+            //ctx.lineJoin = "mitter";
+            ctx.moveTo(0,50);
+
+  ctx.scale(-1, 1.15);
+  ctx.font = '38px serif';
+  ctx.fillText('OЯꓷИAႱƎ⅃A', -235, 50);
+  ctx.fillText('OƆIᕋ', -100, 100);
+
+
+        } else {
+            alert("Error al crear tu contexto");    
+        }
+    }
+
+}
+
+
+
+</script>
+</head>
+
+<body background="DBZH2.PNG">
+
+<img src="ALEHO.jpeg"
+     width="330"
+     height="341">
+
+
+
+<canvas id="miCanvas" width="260px" height="310px">
+Tu navegador no soporta CANVAS
+</canvas>
+</body>
+</html>
